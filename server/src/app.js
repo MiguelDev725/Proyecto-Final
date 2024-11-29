@@ -10,9 +10,9 @@ const app = express();
 
 app.use(
   cors({
-    origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
+    origin: ["http://localhost:5173", "https://proyecto-final-api-murex.vercel.app"], // Orígenes permitidos
+    methods: ["GET", "POST", "PUT", "DELETE"], // Métodos permitidos
+    credentials: true, // Necesario si envías cookies o encabezados de autenticación
   })
 );
 
